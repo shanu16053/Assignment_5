@@ -22,17 +22,18 @@ import java.io.IOException;
 public class AccessInternetActivity extends AppCompatActivity {
     public static final String SAVED_VALUE="about";
     String mAbout_string="About IIITD";
-  Button mShowButton;
+  Button mShowButton,mReloadButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_access_internet);
         mShowButton=(Button)findViewById(R.id.button_show);
+
         if(savedInstanceState!=null) {
             mAbout_string=savedInstanceState.getString(SAVED_VALUE);
             TextView textView=(TextView)findViewById(R.id.txt_about);
             textView.setText(mAbout_string);
-            mShowButton.setEnabled(false);
+
         }
 
         mShowButton.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +44,7 @@ public class AccessInternetActivity extends AppCompatActivity {
                 if (networkInfo != null && networkInfo.isConnected())
                 {
                     new  About().execute();
+                  //  mShowButton.setEnabled(false);
                 }
                 else
                 {

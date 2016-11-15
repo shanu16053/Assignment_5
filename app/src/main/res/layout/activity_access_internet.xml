@@ -29,17 +29,18 @@
        android:layout_marginTop="30dp" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Show"
-        android:id="@+id/button_show"
-        android:layout_below="@+id/txt_about"
-        android:layout_margin="20dp"
-        android:gravity="center"
-        android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show"
+            android:id="@+id/button_show"
+            android:layout_below="@+id/txt_about"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
 
 
-         />
+            />
+
         </RelativeLayout>
     </ScrollView>
 
